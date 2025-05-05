@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@plugin "daisyui"{
+  themes: all
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--pc)); /* Match primary color from theme */
+  border-radius: 5px;
+  border: 2px solid hsl(var(--b2)); /* Creates padding effect */
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: 0;
+
+}
