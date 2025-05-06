@@ -37,7 +37,7 @@ const App = () => {
     <div className="h-screen" data-theme={theme}>
       <Routes>
         <Route>
-          <Route path="/" element={<ComingSoon />} />
+          <Route path="/comingsoon" element={<ComingSoon />} />
         </Route>
         <Route
           path="/friends"

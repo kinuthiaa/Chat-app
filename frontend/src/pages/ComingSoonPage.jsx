@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Link from 'react-router'
 import { useThemeStore } from '../store/useThemeStore';
 
 
@@ -93,6 +94,11 @@ const ComingSoon = () => {
                         />
                         <button className="btn btn-primary px-8 hover:scale-105 transition-transform">
                             Notify Me
+                        </button>
+                    </div>
+                    <div className="flex mx-auto">
+                        <button className='flex items-center cursor-pointer justify-center btn btn-accent'>
+                            <Link to={"/"}>Back Home</Link>
                         </button>
                     </div>
                     <p className="text-xs text-center mt-4 text-base-content/60">
