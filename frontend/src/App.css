@@ -8,13 +8,76 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: hsl(var(--pc)); /* Match primary color from theme */
+  background-color: hsl(var(--pc));
+  /* Match primary color from theme */
   border-radius: 5px;
-  border: 2px solid hsl(var(--b2)); /* Creates padding effect */
+  border: 2px solid hsl(var(--b2));
+  /* Creates padding effect */
 }
 
 /* Firefox scrollbar */
 * {
   scrollbar-width: 0;
+}
 
+/* Animation keyframes */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+@keyframes float-delay {
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(20px) scale(1.05);
+  }
+}
+
+@keyframes gradient-xy {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  25% {
+    background-position: 100% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  75% {
+    background-position: 0% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Custom utility classes */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float-delay 7s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.animate-gradient-xy {
+  background-size: 200% 200%;
+  animation: gradient-xy 15s ease infinite;
 }

@@ -1,8 +1,9 @@
 import React from 'react'
+import ComingSoon from './ComingSoonPage'
 
 const AIchatPage = () => {
   return (
-    <div>AIchatPage</div>
+    <ComingSoon />
   )
 }
 

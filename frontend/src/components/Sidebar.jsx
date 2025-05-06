@@ -10,7 +10,7 @@ const Sidebar = ({ onClose }) => {
 
     return (
         <aside className='w-64 transition-normal duration-300 bg-base-200 border-r border-base-300 h-screen'>
-            <div className="p-5 border-b border-base-300">
+            <div className="p-5 ">
                 <Link to="/" className='flex items-center gap-2.5'>
                     <ShipWheelIcon className='size-9 text-primary' />
                     <span className="text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-wider">
@@ -71,7 +71,7 @@ const Sidebar = ({ onClose }) => {
                     <span>Schedule</span>
                 </Link>
             </nav>
-            <div className="p-4 fixed border-t border-base-300 mt-auto bottom-0">
+            <div className="p-4 fixed mt-auto bottom-0">
                 <div className="flex items-center gap-3">
                     <div className="avatar">
                         <div className="w-10 rounded-full">

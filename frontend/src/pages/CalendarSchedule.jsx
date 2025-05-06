@@ -1,8 +1,9 @@
 import React from 'react'
+import ComingSoon from './ComingSoonPage'
 
 const CalendarSchedule = () => {
   return (
-    <div>CalendarSchedule</div>
+    <ComingSoon />
   )
 }
 
