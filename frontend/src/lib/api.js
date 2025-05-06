@@ -113,3 +113,55 @@ export async function removeCall(callId) {
         throw error;
     }
 }
+
+export async function getNotebooks() {
+    const response = await axiosInstance.get("/notes");
+    return response.data;
+}
+
+export async function createNotebook(notebookName) {
+    const response = await axiosInstance.post("/notes", { notebookName });
+    return response.data;
+}
+
+export async function getNotes(notebookId) {
+    try {
+        console.log('Making API request to:', `/notes/${notebookId}/notes`);
+        const response = await axiosInstance.get(`/notes/${notebookId}/notes`);
+        console.log('Raw API response:', response);
+        return Array.isArray(response.data) ? response.data : [];
+    } catch (error) {
+        console.error('API error:', error);
+        throw error;
+    }
+}
+
+export async function createNote(notebookId, noteData) {
+    if (!notebookId) {
+        throw new Error('Notebook ID is required');
+    }
+
+    try {
+        const response = await axiosInstance.post(`/notes/${notebookId}/notes`, {
+            title: noteData.title?.trim(),
+            content: noteData.content || ''
+        });
+        return response.data;
+    } catch (error) {
+        console.error("Error creating note:", error);
+        if (error.response?.status === 500) {
+            console.error("Server Error Details:", error.response.data);
+        }
+        throw error;
+    }
+}
+
+export async function updateNote(notebookId, noteId, noteData){
+    const response = await axiosInstance.put(`/notes/${notebookId}/notes/${noteId}`, noteData);
+    return response.data;
+}
+
+export async function deleteNote(notebookId, noteId){
+    const response = await axiosInstance.delete(`/notes/${notebookId}/notes/${noteId}`);
+    return response.data;
+}

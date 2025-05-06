@@ -27,7 +27,7 @@ const Sidebar = ({ onClose }) => {
                     <XIcon className="size-5" />
                 </button>
             )}
-            <nav className='flex-1 p-4 space-y-1'>
+            <nav className='flex-1 p-4 space-y-2'>
                 <Link to="/" 
                 onClick={onClose}
                 className={`btn btn-ghost justify-start w-full gap-3 px-3 normal-case ${currentPath === "/" ? "btn-active": ""}`}>
@@ -77,7 +77,7 @@ const Sidebar = ({ onClose }) => {
                     <span>Schedule</span>
                 </Link>
             </nav>
-            <div className="p-4 border-t border-base-300 mt-auto">
+            <div className="p-4 fixed border-t border-base-300 mt-auto bottom-0">
                 <div className="flex items-center gap-3">
                     <div className="avatar">
                         <div className="w-10 rounded-full">
