@@ -58,12 +58,6 @@ const Sidebar = ({ onClose }) => {
                     <MessageCircleMore className='size-5 text-base-content opacity-70'/>
                     <span>Chats</span>
                 </Link>
-                <Link to="/notes/:id"
-                    onClick={onClose} 
-                className={`btn btn-ghost justify-start w-full gap-3 px-3 normal-case ${currentPath === "/notes/:id" ? "btn-active": ""}`}>
-                    <NotebookPenIcon className='size-5 text-base-content opacity-70'/>
-                    <span>Your Notes</span>
-                </Link>
                 <Link to="/aichat/:id"
                     onClick={onClose} 
                 className={`btn btn-ghost justify-start w-full gap-3 px-3 normal-case ${currentPath === "/aichat/:id" ? "btn-active": ""}`}>
